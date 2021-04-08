@@ -1,0 +1,46 @@
+scalar Date
+scalar JSON
+
+type Query {
+  getTeam: Team
+  getFolders(parent: String!): [Folder]
+  getFolder(id: String!): Folder
+}
+
+type Mutation {
+    captureEmail(email: String!): User
+    signUp(id: String!, firstName: String!, lastName: String!, password: String!): AuthPayload!
+    login(email: String!, password: String!): AuthPayload!
+}
+
+type User {
+    id: String
+    name: String
+    firstName: String
+    lastName: String
+    email: String
+    avatarColour: String
+    jobTitle: String
+    team: String
+    role: String
+    status: String
+    createdAt: Date
+}
+
+type AuthPayload {
+    token: String!
+    user: User!
+}
+
+type Team {
+    id: String
+    name: String
+}
+
+type Folder {
+    id: String
+    name: String
+    parent: String
+    description: String
+    shareWith: [JSON]
+}

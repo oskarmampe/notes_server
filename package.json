@@ -1,0 +1,33 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "./node_modules/nodemon/bin/nodemon.js src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "example@github.com"
+  },
+  "keywords": [
+    "keywords"
+  ],
+  "author": "om",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "dotenv": "^6.0.0",
+    "graphql": "^0.13.2",
+    "graphql-yoga": "1.14.10",
+    "jsonwebtoken": "^8.3.0",
+    "moment": "^2.22.2",
+    "mongoose": "^5.1.5",
+    "nodemailer": "^4.6.7",
+    "nodemon": "^1.17.5"
+  },
+  "nodemonConfig": {
+    "ext": "js,json,graphql"
+  }
+}
